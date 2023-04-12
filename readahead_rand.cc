@@ -129,7 +129,7 @@ int main(int argc, char** argv) {
 
   for (int i = 0; i < 64; i++) {
     std::vector<char> buf(unit);
-    ret = pread(fd, &buf[0], unit, RandomOffset(fsize, unit));
+    ret = pread(fd, &buf[0], unit, RandomOffset(fsize, unit));  //pread 指定偏移量读取文件
     if (ret < 0) {
       perror("read");
     }

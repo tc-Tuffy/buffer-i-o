@@ -125,7 +125,7 @@ int main(int argc, char** argv) {
 
   for (int i = 0; i < 64; i++) {
     std::vector<char> buf(unit);
-    ret = read(fd, &buf[0], unit);
+    ret = read(fd, &buf[0], unit);  //顺序读取文件
     if (ret < 0) {
       perror("read");
     }
